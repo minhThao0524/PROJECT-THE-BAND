@@ -149,9 +149,11 @@ html{
 }
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px 112px;
+    padding-left: 16px;
 }
 #content .section-heading{
     font-size: 30px;
@@ -329,6 +331,7 @@ html{
 .modal-container{
     background-color: #fff;
     width: 900px;
+    max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
     animation: modalFadeIn ease 0.5s;
@@ -419,5 +422,12 @@ header.modal-header{
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@media (max-width :800px){
+    .pc,
+    .tablet,
+    .mobile{
+        color: red;
     }
 }
