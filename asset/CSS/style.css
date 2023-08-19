@@ -38,10 +38,13 @@ html{
     width: 100%;
 }
 .mt-8{
-    margin-top: 8px;
+    margin-top: 8px!important;
 }
 .mt-16{
-    margin-top: 16px;
+    margin-top: 16px !important;
+}
+.mt-32{
+    margin-top: 32px !important;
 }
 /* main */
 #nav{
@@ -56,7 +59,7 @@ html{
     background-color: #000;
     z-index: 1;
 }
-#nav, .subnav {
+#nav .subnav {
     list-style: none;
 }
 #nav > li{
@@ -110,18 +113,36 @@ html{
 #nav .icon{
     font-size: 16px;
 }
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .mobile-menu-btn,
 #header .search {
     float: right;
+    
+
 }
+#header .menu-icon,
 #header .button{
     color: #fff;
     line-height: 46px;
     padding: 0 24px;
     font-size: 14px;
 }
+
 #header .search:hover{
     background-color: #f44336;
     cursor: pointer;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
 }
 #silder{
     position: relative;
@@ -146,14 +167,16 @@ html{
     font-weight: bolder;
     font-size: 15px;
     margin-top: 15px ;
+    text-shadow: 0 0 1px #000;
 }
 #content .content-section{
     width: 800px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 16px 112px;
+    padding: 64px 0 112px;
     padding-left: 16px;
+    padding-right: 16px;
 }
 #content .section-heading{
     font-size: 30px;
@@ -176,7 +199,7 @@ html{
     font-size: 15px
 }
 #content .list{
-    margin: 48px 0;
+    margin-top: 32px;
     text-align: center;
     overflow: hidden;
 }
@@ -222,7 +245,7 @@ html{
     margin-right: 16px
 }
 .place-list{
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 .place-imge{
@@ -262,6 +285,7 @@ html{
     margin-top: 15px;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 .btn:hover{
     color: #000;
@@ -273,6 +297,13 @@ html{
 }
 .contact-infor{
     font-size: 18px;
+}
+.contact-infor a{
+    color: #0004ed;
+    opacity: 0.8;
+}
+.contact-infor a:hover{
+    opacity: 1;
 }
 .contact-infor i{
     display: inline-block;
@@ -299,6 +330,7 @@ html{
 }
 #footer .social-list a{
     color: #757575;
+
 }
 #footer .coppyright a:hover,
 #footer .social-list a:hover{
